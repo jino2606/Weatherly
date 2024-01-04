@@ -24,9 +24,9 @@
   </head>
   <body>
 
-    <section> <!-- Header Section -->
+    <section class="mt-0"> <!-- Header Section -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid d-flex justify-content-between nav_body">
+            <div class="container-fluid d-flex justify-content-around nav_body">
 
                 <a class="navbar-brand" href="#">
                     <img src="./assets/images/logo.png" alt="Logo" class="d-inline-block align-text-bottom">
@@ -54,9 +54,9 @@
                     </div>
                   </form>
 
-                <div class="" id="navbarSupportedContent">
+                <!-- <div class="nav-item" id="navbarSupported">
                     <button class="btn rounded-pill login_button">Login</button>
-                </div>
+                </div> -->
 
                 <!-- <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item d_modes">
@@ -74,178 +74,174 @@
         </nav>
     </section>
 
-    <section> <!-- The weather Widjects -->
+    <section class="mb-sm-3 mb-lg-5"> <!-- The weather Widjects -->
 
-        <div class="container-fluid content_body">
-            <div class="row gap-3">
-                <div class="col-md-4 col-sm-12 order-2 order-md-1">
-                    <div class="row gap-3 widget_col mb-3 rounded-5">
-                        <div class="col-12 rounded-4 wid_main ">
-                            <p class="widget_title">Sunset & Sunrise</p>
-                            <div class="row"> <!-- inside data -->
-                                <div class="col-md-2 col-4 align-self-center">
-                                    <img class="tile_img" src="./assets/images/download/sun.png" alt="">
+        <div class="container content_body p-md-0 px-sm-2">
+
+                        <section class="mt-0">
+                            <div class="row right_widget rounded-5 mb-3 m-0">
+                                <div class="col-lg-7 col-sm-12 right_widCol"> <!-- colmn 1 -->
+                                    <div class="row">
+                                        <h2 class="right_heading">Now</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6" >
+                                            <p class="right_widTemp" id="currentTemp">5<sup class="right_widDeg">&deg;C</sup></p>
+                                        </div>
+                                        <div class="col-6 justify-content-center right_widImg">
+                                            <img id="weather_img" src="./assets/images/logo.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3 id="weather_desc">Broken Clouds</h3>
                                 </div>
-                                <div class="col-md-4 col-8">
-                                    <p class="detail_name">Sunrise</p>
-                                    <p class="details" id="sunrise_time">06:46 AM</p>
-                                </div>
-                                <div class="col-md-2 col-4 align-self-center">
-                                    <img class="tile_img" src="./assets/images/download/moon.png" alt="">
-                                </div>
-                                <div class="col-md-4 col-8">
-                                    <p class="detail_name">Sunset</p>
-                                    <p class="details" id="sunset_time">06:46 PM</p>
+    
+                                <div class="col-lg-5 col-sm-12 ps-lg-5 ps-sm-0 pe-2 text-center the_clock"> <!-- colmn 2 -->
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa-regular fa-clock clk_icon"></i>
+                                        <p class="clk_time" id="clk_time">05:45 AM</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ms-3">
+                                        <i class="fa-regular fa-calendar d-block spl_icon"></i>
+                                        <p class="time_detail" id="date_today">Wednesday 01 Dec</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ms-3">
+                                        <i class="fa-solid fa-location-dot d-block spl_icon"></i>
+                                        <p class="time_detail" id="current_place">Kaliyakkavilai</p>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
-                        <div class="col-md col-sm-12 rounded-4 widget_in">
-                            <p class="widget_title">Visibility</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <img class="tile_img" src="./assets/images/download/eye.png" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <p class="details" id="wid_visibility">10</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md col-sm-12 rounded-4 widget_in">
-                            <p class="widget_title">Feels Like</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <img class="tile_img" src="./assets/images/download/thermometer.png" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <p class="details" id="wid_feelsLike">2</p>
-                                </div>
-                            </div>
-                        </div>
-                          
-                    </div>
-                    <!-- <h4>Weather Overview</h4> -->
+                        <section>
+                            <h2 class="text-center mb-4">Upcoming 7 Days Weather</h2>
+                            <div class="row weekly_main p-0 m-0">
+                                <div class="container overflow-hidden position-relative p-0 rounded-4 weekly_grp">
+                                    <div class="d-flex position-absolute p-0 weekly_data" id="card_group">
+                                        <!-- Div for the Weekly Weather cards -->
 
-                    <!-- Second Card -->
-                    <div class="row gap-3 widget_col rounded-5">
-                        <div class="col-12 rounded-4 wid_main">
-                            <p class="widget_title">Wind Stats</p>
-                            <div class="row text-center align-items-center"> <!-- inside data -->
-                                <div class="col-3 align-self-center text-start">
-                                    <i class="fa-solid fa-wind" style="font-size: 3.5em;"></i>
+                                    </div>
                                 </div>
-                                <div class="col-9">
-                                    <div class="row justify-content-between">
-                                        <div class="col-md col-sm-12">
-                                            <p class="detail_name">Speed</p>
-                                            <p class="details" id="wind_speed">3</p>
-                                        </div>
-                                        <div class="col-md col-sm-12">
-                                            <p class="detail_name">Gust</p>
-                                            <p class="details" id="wind_gust">5 <span class="detail_units">km\h</span></p>
-                                        </div>
-                                        <div class="col-md col-sm-12">
-                                            <p class="detail_name">Direction</p>
-                                            <img class="tile_img" id="wind_dir" src="./assets/images/weather_icons/direction.png" alt="">
-                                        </div>
+                            </div>                           
+                            <div class="mt-4 d-flex justify-content-center navigateBtn">
+                                <button class="crsl_prev m-2 rounded-circle" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev" data-bs-toggle="tooltip" data-bs-title="Previous" data-bs-custom-class="custom-tooltip">
+                                  <i class="fa-solid fa-circle-chevron-left"></i>
+                                </button>
+                                <button class="crsl_next m-2 rounded-circle" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next" data-bs-toggle="tooltip" data-bs-title="Next" data-bs-custom-class="custom-tooltip">
+                                  <i class="fa-solid fa-circle-chevron-right"></i>
+                                </button>
+                            </div>
+                        </section>
+            <section>
+                <h2 class="text-center mb-4">Weather Overview</h2>
+                    <div class="row gap-3 p-0 m-0">
+                        <div class="col-xl widget_col rounded-5">
+                            <div class="row rounded-4 wid_main ">
+                                <p class="widget_title">Sunset & Sunrise</p>
+                                <div class="row p-0 mx-auto"> <!-- inside data -->
+                                    <div class="col-md-2 col-4 align-self-center ps-0">
+                                        <img class="tile_img" src="./assets/images/download/sun.png" alt="">
+                                    </div>
+                                    <div class="col-md-4 col-8 p-0 ">
+                                        <p class="detail_name">Sunrise</p>
+                                        <p class="details" id="sunrise_time">06:46<span class="ampm">AM</span></p>
+                                    </div>
+                                    <div class="col-md-2 col-4 align-self-center justify-content-center pe-0">
+                                        <img class="tile_img" src="./assets/images/download/moon.png" alt="">
+                                    </div>
+                                    <div class="col-md-4 col-8 p-0">
+                                        <p class="detail_name">Sunset</p>
+                                        <p class="details" id="sunset_time">06:46 PM</p>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="row gap-3">
+                                <div class="col-md col-sm-12 rounded-4 widget_in">
+                                    <p class="widget_title">Visibility</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="tile_img" src="./assets/images/download/eye.png" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="details" id="wid_visibility">10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md col-sm-12 rounded-4 widget_in">
+                                    <p class="widget_title">Feels Like</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="tile_img" src="./assets/images/download/thermometer.png" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="details" id="wid_feelsLike">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <!-- Second Card -->
+                        <div class="col-xl widget_col rounded-5">
+                            <div class="row rounded-4 wid_main">
+                                <p class="widget_title">Wind Stats</p>
+                                <div class="row text-center align-items-center"> <!-- inside data -->
+                                    <div class="col-3 align-self-center text-start">
+                                        <i class="fa-solid fa-wind" style="font-size: 3.5em;"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row justify-content-between">
+                                            <div class="col-md col-sm-12">
+                                                <p class="detail_name">Speed</p>
+                                                <p class="details" id="wind_speed">3</p>
+                                            </div>
+                                            <div class="col-md col-sm-12">
+                                                <p class="detail_name">Gust</p>
+                                                <p class="details" id="wind_gust">5 <span class="detail_units">km\h</span></p>
+                                            </div>
+                                            <div class="col-md col-sm-12">
+                                                <p class="detail_name">Direction</p>
+                                                <img class="tile_img" id="wind_dir" src="./assets/images/weather_icons/direction.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="col-md col-sm-12 rounded-4 widget_in">
-                            <p class="widget_title">Humidity</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <img class="tile_img" src="./assets/images/download/humidity.png" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <p class="details" id="weath_humid">50</p>
-                                </div>
                             </div>
-                        </div>
-                        <div class="col-md col-sm-12 rounded-4 widget_in">
-                            <p class="widget_title">Pressure</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <img class="tile_img" src="./assets/images/download/pressure.png" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <p class="details" id="weath_pressure">1025</p>
-                                    <!-- <span class="detail_units">hpa</span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- Second Card End -->
 
-                </div> 
-
-                <div class="col-md col-sm-12 order-1 order-md-2"> <!-- Right Side -->
-                    <div class="row right_widget rounded-5 mb-3">
-                        <div class="col-md-7 col-sm-12 right_widCol"> <!-- colmn 1 -->
-                            <div class="row">
-                                <h4 class="right_heading">Now</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-6" >
-                                    <p class="right_widTemp" id="currentTemp">5<sup class="right_widDeg">&deg;C</sup></p>
+                            <div class="row gap-3">
+                                <div class="col-md col-sm-12 rounded-4 widget_in">
+                                    <p class="widget_title">Humidity</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="tile_img" src="./assets/images/download/humidity.png" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="details" id="weath_humid">50</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-6 justify-content-center right_widImg">
-                                    <img id="weather_img" src="./assets/images/logo.png" alt="">
+                                <div class="col-md col-sm-12 rounded-4 widget_in">
+                                    <p class="widget_title">Pressure</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="tile_img" src="./assets/images/download/pressure.png" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="details" id="weath_pressure">1025</p>
+                                            <!-- <span class="detail_units">hpa</span> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <h5 id="weather_desc">Broken Clouds</h5>
-                        </div>
-
-                        <!-- <div class="col-md-1 col-12 separator"></div> -->
-                        <div class="col-md-5 col-sm-12 ps-md-5 ps-sm-0 pe-2 text-center the_clock"> <!-- colmn 2 -->
-                            <div class="d-flex align-items-center">
-                                <i class="fa-regular fa-clock clk_icon"></i>
-                                <p class="clk_time" id="clk_time">05:45 AM</p>
-                            </div>
-                            <div class="d-flex align-items-center ms-3">
-                                <i class="fa-regular fa-calendar d-block spl_icon"></i>
-                                <p class="time_detail" id="date_today">Wednesday 01 Dec</p>
-                            </div>
-                            <div class="d-flex align-items-center ms-3">
-                                <i class="fa-solid fa-location-dot d-block spl_icon"></i>
-                                <p class="time_detail" id="current_place">Kaliyakkavilai</p>
-                            </div>
-                            
-                        </div>
+                        </div> <!-- Second Card End -->
                     </div>
-
-                    <div class="row weekly_main">
-                        <div class="container overflow-hidden position-relative p-0 rounded-4 weekly_grp">
-                            <div class="d-flex position-absolute p-0" id="card_group">
-                                <!-- Div for the Weekly Weather cards -->
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <!-- <div class="col-md"> -->
-                    <!-- <div class="container">
-                        <div class="custom-row overflow-hidden"> 
-
-
-                            
-                            
-                        </div>
-                    </div> -->
-                <!-- </div>     -->
-            </div>
+                <!-- </div>  -->
+            </section>           
         </div>
 
     </section>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./script.js"></script>

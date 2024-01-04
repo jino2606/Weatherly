@@ -121,6 +121,10 @@ body{
     color: var(--on-background);
 }
 
+section{
+    margin-top: 4.5em;
+}
+
 @font-face {
 
     font-family: 'Material Symbols Rounded';
@@ -139,9 +143,9 @@ body{
 
 }
 
-.content_body{
-    padding: 4em 5em;
-}
+/* .content_body{
+    padding: 4em 1em;
+} */
 
 
 .nav_body a img{
@@ -227,7 +231,7 @@ body{
 .widget_col{
 
     background: var(--white-alpha-8);
-    padding: 1.5em;
+    padding: 2em;
 
 }
 
@@ -239,7 +243,8 @@ body{
 .wid_main {
     
     background: var(--on-primary);
-    padding: 2em;
+    padding: 1.5em;
+    margin-bottom: 1em;
     /* height: 12em; */
 
 }
@@ -272,7 +277,6 @@ body{
 
 .details{
 
-    /* font-family: 'Material Symbols Rounded'; */
     font-family: var(--ff-nunito-sans);
     font-size: 2.5em;
 
@@ -345,6 +349,10 @@ body{
     font-family: var(--ff-nunito-sans);
 }
 
+/* .ampm{
+    font-size: 5em
+} */
+
 .clk_icon{ font-size: 5em }
 
 .clk_time{
@@ -369,13 +377,22 @@ body{
 /* Weekly Widjets Styling */
 
 .weekly_main{
-    height: 18em;
+    height: 15em;
+}
+
+.weekly_data{
+    transition: all .5s ease;
 }
 
 .weekly_card{
 
     width: 13em;
     background: var(--white-alpha-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally within the card */
 
 }
 
@@ -390,20 +407,20 @@ body{
     height: 85px;
     /* object-fit: contain; */
     margin-bottom: 1em;
+    
 
 }
-.Weekly_temp{
 
+div.weekly_card .Weekly_temp {
     font-size: 1.5em;
-
 }
 
-.custom-row {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent text from wrapping */
-    max-width: 100em;
+.navigateBtn button i{
+    font-size: 2em;
 }
 
+.navigateBtn .crsl_next i:active, .navigateBtn .crsl_prev i:active{
+    font-size: 1.8em;
+}
 
 
